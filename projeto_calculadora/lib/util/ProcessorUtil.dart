@@ -53,21 +53,21 @@ class ProcessorUtil {
   } 
 
   calculate(){
-    double n1 = double.parse(text.substring(0, operatorIndex - 1));
-    double n2 = double.parse(text.substring(operatorIndex));
+    int n1 = int.parse(text.substring(0, operatorIndex - 1));
+    int n2 = int.parse(text.substring(operatorIndex));
     String op = text.substring(operatorIndex - 1, operatorIndex);
     switch(op){
       case "+":
-        text = (n1 + n2).toStringAsPrecision(2);
+        text = (n1 + n2).toString();
         break;
       case "-":
-        text = (n1 - n2).toStringAsPrecision(2);
+        text = (n1 - n2).toString();
         break;
       case "*":
-        text = (n1 * n2).toStringAsPrecision(2);
+        text = (n1 * n2).toString();
         break;
       case "/":
-        text = (n1 / n2).toStringAsPrecision(2);
+        text = (n1 / n2).truncate().toString();
         break;
       default:
         text = "Error";
