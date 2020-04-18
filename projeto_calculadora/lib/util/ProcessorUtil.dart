@@ -17,7 +17,7 @@ class ProcessorUtil {
         break;
       
       case "AC":
-        deleteDigit();
+        clear();
         break;
 
       case "=":
@@ -47,9 +47,8 @@ class ProcessorUtil {
     operatorIndex = text.length;
   }
 
-  deleteDigit(){
-    if(text.isNotEmpty)
-      text = text.substring(0, text.length - 1);
+  clear(){
+    text = "";
   } 
 
   calculate(){
